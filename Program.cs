@@ -56,7 +56,7 @@
 //                     }
 //                 }
 //             }
-        
+
 //         }
 //     return array;
 // }
@@ -188,18 +188,18 @@
 //     }
 //     Console.WriteLine();
 // }
-// void MultiplicationMatrix(int[,] myArray, int [,] myArray2, int[,] result)
+// void MultiplicationMatrix( int[,] myArray1, int[,] myArray2, int[,] myArray3)
 // {
-//   for (int i = 0; i < result.GetLength(0); i++)
+//   for (int i = 0; i < myArray1.GetLength(0); i++)
 //    {
-//     for (int j = 0; j < result.GetLength(1); j++)
+//     for (int j = 0; j < myArray1.GetLength(1); j++)
 //      {
 //       int sum = 0;
-//       for (int k = 0; k < result.GetLength(1); k++)
+//       for (int k = 0; k < myArray1.GetLength(1); k++)
 //       {
-//         sum += myArray[i,k] * myArray2[k,j];
+//         sum += myArray1[i,k] * myArray2[k,j];
 //       }
-//       result[i,j] = sum;
+//       myArray3[i,j] = sum;
 //     }
 //    }
 // }
@@ -212,17 +212,14 @@
 // int minValue = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine("Input max value of array element");
 // int maxValue = Convert.ToInt32(Console.ReadLine());
-// int[,] myArray = Create2DRandomArray(columns, rows, minValue, maxValue);
+// int[,] myArray1 = Create2DRandomArray(columns, rows, minValue, maxValue);
 // int[,] myArray2 = Create2DRandomArray(columns, rows, minValue, maxValue);
-
-// // int[,] result = new int[4, 4];
-
-// MultiplicationMatrix( myArray, myArray2, result);
-// Console.WriteLine($"\nПроизведение этих двух матриц:");
-// Show2DArray(result);
-// Console.WriteLine();
-// Show2DArray(myArray);
+// Show2DArray(myArray1);
 // Show2DArray(myArray2);
+// int[,] myArray3 = new int[columns, rows];
+// MultiplicationMatrix(myArray1, myArray2, myArray3);
+// Console.WriteLine("The product of the first and second matrices:");
+// Show2DArray(myArray3);
 
 // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 // Массив размером 2 x 2 x 2
